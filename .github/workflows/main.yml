@@ -22,7 +22,7 @@ jobs:
       run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
     - run: Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
     - run: Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
-    - run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "admin@123" -Force)
+    - run: Set-LocalUser -Name "administrator" -Password (ConvertTo-SecureString -AsPlainText "A$ZGD23%m" -Force)
 
     - name: www.toolboxlap.xyz
       env:
@@ -35,3 +35,4 @@ jobs:
     - name: Keep the GitHub Action Runner Alive
       run: |
           Start-Sleep -Seconds 21600  # Adjust the duration based on your needs
+
